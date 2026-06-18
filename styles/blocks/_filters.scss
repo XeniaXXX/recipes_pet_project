@@ -1,0 +1,40 @@
+@use "../helpers" as *;
+
+.filters {
+  max-height: calc(100vh - rem(150));
+  padding: rem(30);
+  background-color: var(--color-light);
+  border-radius: rem(30);
+  border: var(--border);
+  row-gap: rem(20);
+  position: sticky;
+  top: rem(120);
+
+  @include tablet {
+    display: none;
+  }
+
+  &-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: rem(10);
+
+    &__title {
+      display: flex;
+      align-items: center;
+      column-gap: rem(5);
+    }
+
+    &__icon {
+      width: rem(20);
+      height: rem(20);
+    }
+
+    &__clear-btn {
+      border: none;
+      background-color: transparent;
+      color: inherit;
+    }
+  }
+}

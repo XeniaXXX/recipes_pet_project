@@ -1,0 +1,28 @@
+@use "helpers" as *;
+
+:root {
+  --color-text-base: #1f2937;
+  --color-text-light: #6b7280;
+  --color-light: #ffffff;
+  --color-pale: #fafaf8;
+  --color-accent: #ff8a00;
+  --color-base: #2e7d32;
+  --color-button: #38c33f;
+  --color-base-light: #a9d6a7;
+  --color-error: #e53935;
+  --color-border: #e1e5ed;
+
+  --border: #{rem(1)} solid #e5e7eb;
+
+  --font-family-base: "Poppins", sans-serif;
+
+  --container-width: #{rem(1600)};
+  --dish-container-width: #{rem(1350)};
+  --container-padding-x: #{rem(16)};
+
+  --transition-duration: 0.2s;
+
+  @include laptop {
+    --container-width: #{rem(1280)};
+  }
+}

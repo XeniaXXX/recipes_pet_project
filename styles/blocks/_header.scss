@@ -1,0 +1,94 @@
+@use "../helpers" as *;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: var(--color-light);
+  border-bottom: var(--border);
+
+  &__inner {
+    padding-block: fluid(30, 10);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 1rem;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    column-gap: fluid(20, 10);
+    font-size: fluid(40, 18);
+    font-weight: 700;
+    color: var(--color-text-base);
+  }
+
+  &__menu {
+    @include mobile {
+      display: none;
+    }
+
+    &-list {
+      display: flex;
+      align-items: center;
+      column-gap: rem(20);
+      font-size: rem(20);
+
+      @include tablet {
+        font-size: rem(16);
+        column-gap: rem(10);
+      }
+    }
+
+    &-link {
+      @include hover {
+        color: var(--color-base-light);
+      }
+    }
+  }
+
+  &__search {
+    &-wrapper {
+      display: flex;
+      align-items: center;
+      column-gap: rem(10);
+    }
+
+    &-field {
+      position: relative;
+    }
+
+    &-icon {
+      @include abs-y;
+      @include square(#{rem(30)});
+
+      position: absolute;
+      left: rem(5);
+      fill: var(--color-text-light);
+
+      @include tablet {
+        @include visually-hidden;
+      }
+    }
+
+    &-input {
+      border: var(--border);
+      background-color: var(--color-border);
+      padding-block: rem(10);
+      padding-inline: rem(35) rem(15);
+      border-radius: rem(30);
+
+      @include tablet {
+        @include visually-hidden;
+      }
+
+      &:focus {
+        outline: none;
+        border-color: var(--color-base-light);
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@use "../helpers" as *;
+
+.filters-list {
+  display: grid;
+  row-gap: rem(7);
+
+  &__label {
+    display: inline-flex;
+    align-items: center;
+    column-gap: rem(5);
+  }
+
+  &__input {
+    --size: #{rem(20)};
+
+    @include square(var(--size));
+    appearance: none;
+    border: rem(1) solid var(--color-text-light);
+    border-radius: rem(4);
+
+    &:not(:checked) {
+      &::after {
+        @include hide;
+      }
+    }
+
+    &::after {
+      --size: #{rem(18)};
+
+      @include square(var(--size));
+
+      content: "✓";
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--color-button);
+      color: var(--color-light);
+      border-radius: rem(3);
+    }
+  }
+}

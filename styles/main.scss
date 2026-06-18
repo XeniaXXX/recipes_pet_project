@@ -1,0 +1,24 @@
+@use "normalize";
+@use "fonts";
+@use "variables";
+@use "utils";
+@use "globals";
+
+@use "blocks/icon";
+@use "blocks/header";
+@use "blocks/title";
+@use "blocks/user";
+@use "blocks/tag";
+@use "blocks/hero";
+@use "blocks/section";
+@use "blocks/categories";
+@use "blocks/recipes";
+@use "blocks/recipe-card";
+@use "blocks/main";
+@use "blocks/all-recipes";
+@use "blocks/filters";
+@use "blocks/filters-group";
+@use "blocks/filters-list";
+@use "blocks/recipe";
+@use "blocks/recipe-stat";
+@use "blocks/recipe-list";

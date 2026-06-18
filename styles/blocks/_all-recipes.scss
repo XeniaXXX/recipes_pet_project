@@ -1,0 +1,45 @@
+@use "../helpers" as *;
+
+.all-recipes {
+  display: grid;
+  row-gap: rem(40);
+
+  &__top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: rem(20);
+  }
+
+  &__left {
+    display: grid;
+    row-gap: rem(5);
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    column-gap: rem(10);
+  }
+
+  &__select {
+    padding: rem(10);
+    border-radius: rem(10);
+    border: var(--border);
+  }
+
+  &__all {
+    --columns: 3;
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    gap: rem(20);
+
+    @include laptop {
+      --columns: 2;
+    }
+
+    @include mobile {
+      --columns: 1;
+    }
+  }
+}

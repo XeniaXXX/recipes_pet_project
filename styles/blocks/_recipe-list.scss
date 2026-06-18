@@ -1,0 +1,40 @@
+@use "../helpers" as *;
+
+.recipe-list {
+  display: grid;
+  row-gap: rem(10);
+
+  &__ingredients {
+    list-style-type: disc;
+  }
+
+  &__nutritions,
+  &__timing {
+    &-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--color-text-light);
+    }
+  }
+
+  &__item {
+    &-num {
+      color: var(--color-text-base);
+    }
+  }
+
+  &__timing {
+    &-item {
+      &:not(:last-child) {
+        padding-bottom: rem(10);
+        border-bottom: var(--border);
+      }
+    }
+  }
+
+  &__directions {
+    padding-bottom: rem(10);
+    border-bottom: var(--border);
+  }
+}

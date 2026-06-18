@@ -1,0 +1,7 @@
+@use "../helpers" as *;
+
+.title {
+  &--accent {
+    color: var(--color-base);
+  }
+}

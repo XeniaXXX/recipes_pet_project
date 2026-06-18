@@ -1,0 +1,19 @@
+@use "../helpers" as *;
+
+.section {
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 1rem;
+  }
+
+  &__link {
+    color: var(--color-base);
+    flex-shrink: 0;
+
+    @include hover {
+      color: #256929;
+    }
+  }
+}

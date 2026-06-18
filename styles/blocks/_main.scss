@@ -1,0 +1,22 @@
+@use "../helpers" as *;
+
+.main {
+  background-color: var(--color-pale);
+
+  &__inner {
+    padding-top: fluid(150, 100);
+    padding-bottom: rem(50);
+
+    &:has(.filters) {
+      @include tablet-above {
+        display: grid;
+        grid-template-columns: rem(300) 1fr;
+        column-gap: fluid(40, 10);
+      }
+    }
+  }
+
+  &__header {
+    padding-bottom: rem(30);
+  }
+}

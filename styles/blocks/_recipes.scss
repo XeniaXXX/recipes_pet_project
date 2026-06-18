@@ -1,0 +1,18 @@
+@use "../helpers" as *;
+
+.recipes {
+  &__inner {
+    padding-block: fluid(30, 10);
+  }
+
+  &__cards {
+    padding-block: fluid(50, 20);
+    display: grid;
+
+    gap: fluid(20, 10);
+
+    @include mobile-above {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
