@@ -1,0 +1,17 @@
+@use "../helpers" as *;
+
+.ingredient {
+  padding: rem(10) rem(15);
+  background-color: var(--color-border);
+  border-radius: rem(20);
+
+  &--skeleton {
+    width: rem(100);
+    height: rem(40);
+  }
+
+  @include hover {
+    background-color: var(--color-base-light);
+    color: var(--color-base);
+  }
+}

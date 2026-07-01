@@ -1,0 +1,66 @@
+@use "../helpers" as *;
+
+.cuisines {
+  &__inner {
+    padding-block: fluid(80, 30);
+  }
+
+  &__cards {
+    --columns: 4;
+    padding-top: fluid(50, 20);
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    gap: 1rem;
+
+    @include tablet {
+      --columns: 3;
+    }
+
+    @include mobile {
+      --columns: 2;
+    }
+
+    @include mobile-s {
+      --columns: 1;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: rem(5);
+    overflow: hidden;
+
+    &-image-wrapper {
+      width: 100%;
+      aspect-ratio: 1;
+      border-radius: rem(30);
+      overflow: hidden;
+    }
+
+    &-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: rem(30);
+      transition-duration: var(-o-transition-duration);
+
+      @include hover {
+        scale: 1.2;
+      }
+    }
+
+    &-title--skeleton {
+      width: rem(120);
+      height: 1.5rem;
+      border-radius: 1rem;
+    }
+
+    &-recipes--skeleton {
+      width: rem(130);
+      height: 1rem;
+      border-radius: 1rem;
+    }
+  }
+}

@@ -18,6 +18,11 @@
     justify-content: center;
     row-gap: fluid(30, 15);
 
+    &-info {
+      display: grid;
+      row-gap: rem(10);
+    }
+
     &-search {
       display: flex;
       column-gap: rem(20);
@@ -64,9 +69,9 @@
       }
     }
 
-    &-tags {
+    &-ingredient {
       display: flex;
-      align-items: baseline;
+      align-items: center;
       flex-wrap: wrap;
       gap: rem(10);
     }

@@ -5,6 +5,14 @@
     padding-block: fluid(30, 10);
   }
 
+  &__amount {
+    &--skeleton {
+      width: rem(250);
+      height: 1.5rem;
+      border-radius: rem(20);
+    }
+  }
+
   &__cards {
     padding-block: fluid(50, 20);
     display: grid;

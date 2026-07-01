@@ -20,6 +20,8 @@
   &__image {
     border-radius: rem(30) rem(30) 0 0;
     transition-duration: var(--transition-duration);
+    max-height: rem(350);
+    object-fit: cover;
 
     @include hover {
       scale: 1.1;
@@ -30,8 +32,14 @@
     }
 
     &-wrapper {
+      max-height: rem(350);
       overflow: hidden;
       border-radius: rem(30) rem(30) 0 0;
+
+      &--skeleton {
+        max-width: rem(500);
+        height: rem(500);
+      }
     }
   }
 
@@ -40,13 +48,24 @@
     display: grid;
     row-gap: rem(10);
     margin-bottom: rem(20);
+
+    &-text {
+      width: 100%;
+      height: 1rem;
+      margin-bottom: rem(5);
+      border-radius: rem(20);
+
+      &:last-child {
+        width: 80%;
+      }
+    }
   }
 
   &__title {
     font-weight: 600;
   }
 
-  &__categories {
+  &__cuisines {
     display: flex;
     flex-wrap: wrap;
     align-items: center;

@@ -53,3 +53,18 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+.skeleton {
+  animation: skeleton-loading 1s linear infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(200, 20%, 70%);
+  }
+
+  100% {
+    background-color: hsl(200, 20%, 95%);
+  }
+}

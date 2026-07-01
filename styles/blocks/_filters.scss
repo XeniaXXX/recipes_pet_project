@@ -1,7 +1,7 @@
 @use "../helpers" as *;
 
 .filters {
-  max-height: calc(100vh - rem(150));
+  height: calc(100vh - rem(150));
   padding: rem(30);
   background-color: var(--color-light);
   border-radius: rem(30);
@@ -9,6 +9,7 @@
   row-gap: rem(20);
   position: sticky;
   top: rem(120);
+  overflow-y: auto;
 
   @include tablet {
     display: none;

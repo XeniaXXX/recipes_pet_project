@@ -1,7 +1,8 @@
 @use "../helpers" as *;
 
 .all-recipes {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   row-gap: rem(40);
 
   &__top {
